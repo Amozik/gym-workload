@@ -7,7 +7,74 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.halls {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  user-select: none;
+}
+
+.halls .hall {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.halls .hall-icon {
+  width: 15px;
+  height: 15px; 
+  border-radius: 50%;
+}
+
+.halls .hall-name {
+  margin: 0 10px;
+  color: #c5c5c5;
+}
+
+.halls .hall-name.selected {
+  color: #4a4a4a;
+}
+
+.calendar .row {
+  display: flex;
+  justify-content: center;
+}
+
+.calendar .cell {
+  padding: 5px;
+  border: 1px solid #e9e7e7;
+  flex-basis: 150px;
+  min-width: 120px;
+  display: flex;
+  flex-direction: column;
+}
+
+.calendar .cell.time {
+  max-width: 110px;
+}
+.calendar .cell > p {
+  text-align: center;
+}
+
+.calendar .cell .card {
+  margin: 5px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.calendar .cell .card .booked {
+  text-align: center; 
+}
+
+.calendar .cell .card .comment {
+  min-width: 0;
+  max-width: 120px; /*need to rewrite*/
+}
+
+.calendar .cell .card .comment > p {
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
